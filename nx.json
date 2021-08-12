@@ -1,0 +1,38 @@
+{
+  "npmScope": "pbs-client",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "e-doc-booking": {
+      "tags": []
+    },
+    "e-doc-booking-e2e": {
+      "tags": [],
+      "implicitDependencies": ["e-doc-booking"]
+    }
+  }
+}
