@@ -1,0 +1,105 @@
+{
+  "location": {
+    "id": "",
+    "type": "location",
+    "name": "",
+    "addresses": [
+      {
+        "line1": "",
+        "line2": "",
+        "city": "",
+        "state": "",
+        "country": "",
+        "latitude": "",
+        "longitude": ""
+      }
+    ],
+    "contacts": [
+      {
+        "type": "mobile",
+        "details": "0715554444"
+      }
+    ],
+    "organizationId": ""
+  },
+  "organization": {
+    "id": "",
+    "type": "organization"
+  },
+  "doctor": {
+    "id": "",
+    "type": "doctor",
+    "firstName": "",
+    "lastName": "",
+    "locations": ["", ""],
+    "specialties": [
+      {
+        "name": "Nutrition"
+      }
+    ],
+    "slots": [
+      {
+        "id": "",
+        "duration": 30
+      },
+      {
+        "id": "",
+        "duration": 45
+      }
+    ],
+    "reservedSlots": [
+      {
+        "start": "00:00",
+        "end": "07:59",
+        "details": ""
+      },
+      {
+        "start": "12:00",
+        "end": "12:59",
+        "details": ""
+      },
+      {
+        "start": "18:00",
+        "end": "23:59",
+        "details": ""
+      }
+    ]
+  },
+  "reservation": {
+    "id": "",
+    "type": "reservation",
+    "start": "00:00",
+    "end": "",
+    "doctorId": "",
+    "patientId": "",
+    "locationId": "",
+    "date": "",
+    "status": "active",
+    "isCanceled": ""
+  },
+  "patient": {
+    "firstName": "",
+    "lastName": "",
+    "age": 20,
+    "email": "",
+    "mobile": "",
+    "registered": true,
+    "history": [
+      {
+        "reservationId": "",
+        "doctorId": "",
+        "notes": [
+          {
+            "type": "diagnosis",
+            "details": ""
+          },
+          {
+            "type": "question",
+            "title": "",
+            "answer": ""
+          }
+        ]
+      }
+    ]
+  }
+}
