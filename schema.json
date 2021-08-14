@@ -101,5 +101,13 @@
         ]
       }
     ]
+  },
+  "invoice": {
+    "id": "",
+    "appointmentId": "",
+    "amount": "",
+    "date": "",
+    "doctorId": "",
+    "patientId": ""
   }
 }
