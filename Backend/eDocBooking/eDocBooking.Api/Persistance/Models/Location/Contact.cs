@@ -1,15 +1,20 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace eDocBooking.Api.Persistance.Models
 {
-    public class Contact
+    [Owned]
+    public class Contact : Entity
     {
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("details")]
+        [JsonProperty("details")]
         public string Details { get; set; }
+
+        [JsonProperty("locationId")]
+        public Guid LocationId { get; set; }
     }
 
 

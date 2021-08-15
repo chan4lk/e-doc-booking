@@ -11,14 +11,22 @@ namespace eDocBooking.Api.Persistance.Configuration
         public void Configure(EntityTypeBuilder<Location> builder)
         {
             builder
-                .HasPartitionKey(x => x.Id)
-                .OwnsMany(x => x.Addresses);
+                .HasPartitionKey(x => x.Id);
 
-            builder.OwnsMany(x => x.Contacts);
+            builder
+                .OwnsMany(x => x.Addresses)
+                .Property(x => x.LocationId)
+                .HasConversion<string>(); ;
+
+            builder.OwnsMany(x => x.Contacts)
+                .Property(x => x.LocationId)
+                .HasConversion<string>();
 
             builder.Property(x => x.Id)
                 .HasConversion<string>();
-                
+
+            builder.Property(x => x.OrganizationId)
+                .HasConversion<string>();
         }
     }
 }

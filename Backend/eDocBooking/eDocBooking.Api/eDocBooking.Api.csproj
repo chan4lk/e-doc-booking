@@ -24,6 +24,8 @@
     <None Remove="AutoMapper" />
     <None Remove="Handlers\Behaviour\" />
     <None Remove="Persistance\Configuration\" />
+    <None Remove="Handlers\Profiles\" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
@@ -32,6 +34,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.9" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handlers\" />
@@ -47,5 +50,6 @@
     <Folder Include="Persistance\Repository\Repositories\" />
     <Folder Include="Handlers\Behaviour\" />
     <Folder Include="Persistance\Configuration\" />
+    <Folder Include="Handlers\Profiles\" />
   </ItemGroup>
 </Project>

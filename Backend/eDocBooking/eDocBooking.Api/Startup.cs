@@ -54,7 +54,11 @@ namespace eDocBooking.Api
                 using var context = serviceProvider.GetRequiredService<CosmosDbContext>();
 
                 if (isDevelopment)
-                    context.Database.EnsureCreated();               
+                {
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
+                }
+                           
 
             }
 

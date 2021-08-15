@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace eDocBooking.Api.Persistance.Models
 {
     public abstract class Entity
     {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
+        [JsonProperty("id")]
+        public Guid Id { get; set; } = Guid.NewGuid();
     }
 }

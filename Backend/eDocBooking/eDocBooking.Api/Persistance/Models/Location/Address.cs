@@ -1,31 +1,35 @@
 ﻿using System;
-using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace eDocBooking.Api.Persistance.Models
-{    
-    public class Address
+{
+    [Owned]    
+    public class Address : Entity
     {
-        [JsonPropertyName("line1")]
+        [JsonProperty("line1")]
         public string Line1 { get; set; }
 
-        [JsonPropertyName("line2")]
+        [JsonProperty("line2")]
         public string Line2 { get; set; }
 
-        [JsonPropertyName("city")]
+        [JsonProperty("city")]
         public string City { get; set; }
 
-        [JsonPropertyName("state")]
+        [JsonProperty("state")]
         public string State { get; set; }
 
-        [JsonPropertyName("country")]
+        [JsonProperty("country")]
         public string Country { get; set; }
 
-        [JsonPropertyName("latitude")]
+        [JsonProperty("latitude")]
         public string Latitude { get; set; }
 
-        [JsonPropertyName("longitude")]
+        [JsonProperty("longitude")]
         public string Longitude { get; set; }
+
+        [JsonProperty("locationId")]
+        public Guid LocationId { get; set; }
     }
 
 }

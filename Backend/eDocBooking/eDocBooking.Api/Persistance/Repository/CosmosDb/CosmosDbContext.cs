@@ -26,9 +26,13 @@ namespace eDocBooking.Api.Persistance.Repository.CosmosDb
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.HasDefaultContainer(configuration["CosmosDB:Container"]);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(LocationConfiguration).Assembly);
+
+            modelBuilder.Seed();
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public void SetEntryState<TEntry>(TEntry entry, EntityState entityState)
