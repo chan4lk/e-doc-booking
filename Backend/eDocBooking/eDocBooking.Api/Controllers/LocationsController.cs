@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eDocBooking.Api.Handlers.Queries.Locations;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,13 +10,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace eDocBooking.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class LocationsController : Controller
+    public class LocationsController : BaseController
     {
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<LocationsResponse>> GetAsync()
         {
-            return new string[] { "value1", "value2" };
+            return await Mediator.Send(new GetLocationsQuery());
         }
 
         // GET api/values/5
@@ -25,22 +26,5 @@ namespace eDocBooking.Api.Controllers
             return "value";
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

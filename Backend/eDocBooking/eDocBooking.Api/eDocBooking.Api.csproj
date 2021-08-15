@@ -4,4 +4,46 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="Handlers\" />
+    <None Remove="Handlers\Queries\" />
+    <None Remove="Handlers\Commands\" />
+    <None Remove="Handlers\Queries\Locations\" />
+    <None Remove="Persistance\" />
+    <None Remove="Persistance\Models\" />
+    <None Remove="Persistance\Models\Location\" />
+    <None Remove="Handlers\ViewModels\" />
+    <None Remove="Persistance\Repository\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Cosmos" />
+    <None Remove="Persistance\Repository\CosmosDb\" />
+    <None Remove="Persistance\Repository\Repositories\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="AutoMapper" />
+    <None Remove="Handlers\Behaviour\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.9" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handlers\" />
+    <Folder Include="Handlers\Queries\" />
+    <Folder Include="Handlers\Commands\" />
+    <Folder Include="Handlers\Queries\Locations\" />
+    <Folder Include="Persistance\" />
+    <Folder Include="Persistance\Models\" />
+    <Folder Include="Persistance\Models\Location\" />
+    <Folder Include="Handlers\ViewModels\" />
+    <Folder Include="Persistance\Repository\" />
+    <Folder Include="Persistance\Repository\CosmosDb\" />
+    <Folder Include="Persistance\Repository\Repositories\" />
+    <Folder Include="Handlers\Behaviour\" />
+  </ItemGroup>
 </Project>
