@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 
 namespace eDocBooking.Api.Persistance.Models
-{
+{    
     public class Address
     {
         [JsonPropertyName("line1")]

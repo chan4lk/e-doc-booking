@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using eDocBooking.Api.Persistance.Configuration;
 using eDocBooking.Api.Persistance.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,9 +28,7 @@ namespace eDocBooking.Api.Persistance.Repository.CosmosDb
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultContainer(configuration["CosmosDB:Container"]);
-            modelBuilder
-                .Entity<Location>()
-                .HasPartitionKey(x => x.Id);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LocationConfiguration).Assembly);
         }
 
         public void SetEntryState<TEntry>(TEntry entry, EntityState entityState)

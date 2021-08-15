@@ -23,6 +23,7 @@
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="AutoMapper" />
     <None Remove="Handlers\Behaviour\" />
+    <None Remove="Persistance\Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
@@ -45,5 +46,6 @@
     <Folder Include="Persistance\Repository\CosmosDb\" />
     <Folder Include="Persistance\Repository\Repositories\" />
     <Folder Include="Handlers\Behaviour\" />
+    <Folder Include="Persistance\Configuration\" />
   </ItemGroup>
 </Project>
