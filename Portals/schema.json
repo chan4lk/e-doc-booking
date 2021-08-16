@@ -40,11 +40,13 @@
     "slots": [
       {
         "id": "",
-        "duration": 30
+        "duration": 30,
+        "price": 50
       },
       {
         "id": "",
-        "duration": 45
+        "duration": 45,
+        "price": 75
       }
     ],
     "reservedSlots": [

@@ -22,8 +22,10 @@ namespace eDocBooking.Api.Persistance.Configuration
                 .Property(x => x.LocationId)
                 .HasConversion<string>();
 
-            builder.Property(x => x.Id)
+            builder.Property(x => x.Id)                
                 .HasConversion<string>();
+
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.OrganizationId)
                 .HasConversion<string>();
